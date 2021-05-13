@@ -2,10 +2,11 @@
   "name": "@agoransson/bsformhelper",
   "version": "1.0.0",
   "description": "Simple helper for generating react-bootstrap forms from javascript objects.",
-  "main": "lib/FormHelper",
+  "main": "dist/FormHelper.js",
+  "types": "dist/FormHelper.d.ts",
   "scripts": {
-    "build": "rm -rf lib/ && babel ./src/ --out-dir ./lib/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log,/.gitignore --copy-files",
-    "prepublish": "babel src --out-dir lib",
+    "build": "rm -rf dist/ && babel ./src/ --out-dir ./dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log,/.gitignore --copy-files",
+    "prepublish": "tsc && babel src --out-dir dist",
     "test": "jest"
   },
   "author": "Andreas Göransson (http://github.com/agoransson)",
