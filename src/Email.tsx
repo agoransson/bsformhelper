@@ -20,16 +20,16 @@ import React from 'react';
 import { Form } from 'react-bootstrap';
 import { Control, randomId } from '.';
 
-export type TextControl = Control & {
+export type EmailControl = Control & {
 }
-export const isText = (arg: Control): arg is TextControl => arg.type.toLowerCase() === 'text';
+export const isEmail = (arg: Control): arg is EmailControl => arg.type.toLowerCase() === 'email';
 
 /**
- * Renders a text input.
+ * Renders a email input.
  * 
- * @param {TextControl} control 
+ * @param {EmailControl} control 
  * @returns 
  */
-export const renderText = (control: TextControl) => (
-    <Form.Control type="text" key={control.name} {...control} />
+export const renderEmail = (control: EmailControl) => (
+    <Form.Control type="email" key={control.name} {...control} />
 )

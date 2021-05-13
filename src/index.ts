@@ -24,6 +24,8 @@ export {
     Control, isControl,
     LabelControl, isLabel,
     TextControl, isText,
+    PasswordControl, isPassword,
+    EmailControl, isEmail,
     SelectControl, isSelect,
     TextareaControl, isTextarea,
     FileControl, isFile,
@@ -36,6 +38,8 @@ export {
 export {
     renderLabel,
     renderText,
+    renderPassword,
+    renderEmail,
     renderSelect,
     renderTextarea,
     renderFile,

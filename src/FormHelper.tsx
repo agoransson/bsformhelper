@@ -24,6 +24,8 @@ import {
 
     isLabel,
     isText,
+    isPassword,
+    isEmail,
     isSelect,
     isTextarea,
     isFile,
@@ -34,6 +36,8 @@ import {
 
     renderLabel,
     renderText,
+    renderPassword,
+    renderEmail,
     renderSelect,
     renderTextarea,
     renderFile,
@@ -53,6 +57,8 @@ import {
 const renderControl = (control: Control) => (
     isLabel(control) ? renderLabel(control) :
     isText(control) ? renderText(control) :
+    isPassword(control) ? renderPassword(control) :
+    isEmail(control) ? renderEmail(control) :
     isSelect(control) ? renderSelect(control) :
     isTextarea(control) ? renderTextarea(control) :
     isFile(control) ? renderFile(control) :

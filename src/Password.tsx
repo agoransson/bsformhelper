@@ -20,16 +20,16 @@ import React from 'react';
 import { Form } from 'react-bootstrap';
 import { Control, randomId } from '.';
 
-export type TextControl = Control & {
+export type PasswordControl = Control & {
 }
-export const isText = (arg: Control): arg is TextControl => arg.type.toLowerCase() === 'text';
+export const isPassword = (arg: Control): arg is PasswordControl => arg.type.toLowerCase() === 'password';
 
 /**
  * Renders a text input.
  * 
- * @param {TextControl} control 
+ * @param {PasswordControl} control 
  * @returns 
  */
-export const renderText = (control: TextControl) => (
-    <Form.Control type="text" key={control.name} {...control} />
+export const renderPassword = (control: PasswordControl) => (
+    <Form.Control type="password" key={control.name} {...control} />
 )

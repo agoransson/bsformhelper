@@ -19,6 +19,8 @@
 export { Control, isControl } from './Control';
 export { LabelControl, isLabel } from './Label';
 export { TextControl, isText } from './Text';
+export { PasswordControl, isPassword } from './Password';
+export { EmailControl, isEmail } from './Email';
 export { SelectControl, isSelect } from './Select';
 export { TextareaControl, isTextarea } from './Textarea';
 export { FileControl, isFile } from './File';

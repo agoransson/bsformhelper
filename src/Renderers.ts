@@ -18,6 +18,8 @@
 
 export { renderLabel } from './Label';
 export { renderText } from './Text';
+export { renderPassword } from './Password';
+export { renderEmail } from './Email';
 export { renderSelect } from './Select';
 export { renderTextarea } from './Textarea';
 export { renderFile } from './File';
