@@ -28,3 +28,5 @@ export { RangeControl, isRange } from './Range';
 export { CheckboxControl, isCheckbox } from './Checkbox';
 export { RadioControl, isRadio } from './Radio';
 export { DividerControl, isDivider } from './Divider';
+export { ButtonControl, isButton } from './Button';
+export { SubmitControl, isSubmit } from './Submit';

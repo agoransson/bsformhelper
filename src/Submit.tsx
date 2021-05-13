@@ -17,20 +17,22 @@
  */
 
 import React from 'react';
-import { Form } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import { Control } from '.';
 
-export type TextControl = Control & {
+export type SubmitControl = Control & {
+    title: string
 }
 
-export const isText = (arg: Control): arg is TextControl => arg.type.toLowerCase() === 'text';
+export const isSubmit = (arg: Control): arg is SubmitControl => arg.type.toLowerCase() === 'submit';
 
 /**
- * Renders a text input.
+ * Renders a submit.
  * 
- * @param {TextControl} control 
+ * @param {SubmitControl} control 
  * @returns 
  */
-export const renderText = (control: TextControl) => (
-    <Form.Control type="text" key={control.name} {...control} />
+export const renderSubmit = (control: SubmitControl) => (
+    <Button type='submit' block {...control}>{control.title}</Button>
 )
+

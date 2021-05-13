@@ -27,3 +27,5 @@ export { renderRange } from './Range';
 export { renderCheckbox } from './Checkbox';
 export { renderRadio } from './Radio';
 export { renderDivider } from './Divider';
+export { renderButton } from './Button';
+export { renderSubmit } from './Submit';

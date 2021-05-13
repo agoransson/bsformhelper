@@ -33,6 +33,8 @@ import {
     isCheckbox,
     isRadio,
     isDivider,
+    isButton,
+    isSubmit,
 
     renderLabel,
     renderText,
@@ -45,6 +47,8 @@ import {
     renderCheckbox,
     renderRadio,
     renderDivider,
+    renderButton,
+    renderSubmit,
 } from '.';
 
 
@@ -66,6 +70,8 @@ const renderControl = (control: Control) => (
     isCheckbox(control) ? renderCheckbox(control) :
     isRadio(control) ? renderRadio(control) :
     isDivider(control) ? renderDivider() :
+    isButton(control) ? renderButton(control) :
+    isSubmit(control) ? renderSubmit(control) :
     <React.Fragment />
 )
 

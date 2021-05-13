@@ -17,20 +17,22 @@
  */
 
 import React from 'react';
-import { Form } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import { Control } from '.';
 
-export type TextControl = Control & {
+export type ButtonControl = Control & {
+    title: string
 }
 
-export const isText = (arg: Control): arg is TextControl => arg.type.toLowerCase() === 'text';
+export const isButton = (arg: Control): arg is ButtonControl => arg.type.toLowerCase() === 'button';
 
 /**
- * Renders a text input.
+ * Renders a button.
  * 
- * @param {TextControl} control 
+ * @param {ButtonControl} control 
  * @returns 
  */
-export const renderText = (control: TextControl) => (
-    <Form.Control type="text" key={control.name} {...control} />
+export const renderButton = (control: ButtonControl) => (
+    <Button block {...control}>{control.title}</Button>
 )
+

@@ -33,6 +33,8 @@ export {
     CheckboxControl, isCheckbox,
     RadioControl, isRadio,
     DividerControl, isDivider,
+    ButtonControl, isButton,
+    SubmitControl, isSubmit,
 } from './Types';
 
 export {
@@ -47,4 +49,6 @@ export {
     renderCheckbox,
     renderRadio,
     renderDivider,
+    renderButton,
+    renderSubmit,
 } from './Renderers';
