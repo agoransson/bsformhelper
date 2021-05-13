@@ -18,7 +18,7 @@
 
 import React from 'react';
 import { Form } from 'react-bootstrap';
-import { Control, randomId } from ".";
+import { Control } from ".";
 
 export type RadioControl = Control & {
     labels: Array<string>
@@ -36,9 +36,9 @@ export const renderRadio = (control: RadioControl) => {
     const { labels, name } = control;
 
     return (
-        <div key={`${name}-${randomId()}-checkbox`}>
+        <div key={`${name}-checkbox`}>
             {labels.map((label, index) => (<Form.Check
-                key={`${name}-${randomId()}-checkbox-${index}`}
+                key={`${name}-checkbox-${index}`}
                 type='checkbox'
                 id={label}
                 label={label} />))}

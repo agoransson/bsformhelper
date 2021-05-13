@@ -35,10 +35,9 @@ export const isSelect = (arg: Control): arg is SelectControl => arg.type.toLower
  * @returns 
  */
 export const renderSelect = (control: SelectControl) => {
-    const id = randomId();
     const { multiple, options, name } = control;
 
-    return (<Form.Control key={`${name}-${id}`} {...control} as='select' multiple={multiple}>
-        {options.map((option, index) => <option key={`${name}-${id}-option-${index}`}>{option}</option>)}
+    return (<Form.Control key={`${name}`} {...control} as='select' multiple={multiple}>
+        {options.map((option, index) => <option key={`${name}-option-${index}`}>{option}</option>)}
     </Form.Control>)
 }
