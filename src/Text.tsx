@@ -18,10 +18,11 @@
 
 import React from 'react';
 import { Form } from 'react-bootstrap';
-import { Control, randomId } from '.';
+import { Control } from '.';
 
 export type TextControl = Control & {
 }
+
 export const isText = (arg: Control): arg is TextControl => arg.type.toLowerCase() === 'text';
 
 /**
@@ -31,5 +32,5 @@ export const isText = (arg: Control): arg is TextControl => arg.type.toLowerCase
  * @returns 
  */
 export const renderText = (control: TextControl) => (
-    <Form.Control type="text" key={`${control.name}-${randomId()}`} {...control} />
+    <Form.Control type="text" key={control.name} {...control} />
 )

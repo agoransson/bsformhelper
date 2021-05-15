@@ -1,4 +1,3 @@
-"use strict";
 /**
  * bsformhelper
  *
@@ -16,19 +15,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.renderDivider = exports.isDivider = void 0;
-const react_1 = require("react");
-const index_1 = require("./index");
-const isDivider = (arg) => arg.type.toLowerCase() === '-';
-exports.isDivider = isDivider;
+
+import React from 'react';
+import { Form } from 'react-bootstrap';
+import { Control, randomId } from '.';
+
+export type PasswordControl = Control & {
+}
+export const isPassword = (arg: Control): arg is PasswordControl => arg.type.toLowerCase() === 'password';
+
 /**
- * Renders a form divider.
- *
- * @returns
+ * Renders a text input.
+ * 
+ * @param {PasswordControl} control 
+ * @returns 
  */
-const renderDivider = () => {
-    return (react_1.default.createElement("hr", { key: index_1.randomId() }));
-};
-exports.renderDivider = renderDivider;
-//# sourceMappingURL=Divider.js.map
+export const renderPassword = (control: PasswordControl) => (
+    <Form.Control type="password" key={control.name} {...control} />
+)

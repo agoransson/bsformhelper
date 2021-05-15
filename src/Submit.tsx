@@ -1,4 +1,3 @@
-"use strict";
 /**
  * bsformhelper
  *
@@ -16,19 +15,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.renderText = exports.isText = void 0;
-const react_1 = require("react");
-const react_bootstrap_1 = require("react-bootstrap");
-const _1 = require(".");
-const isText = (arg) => arg.type.toLowerCase() === 'text';
-exports.isText = isText;
+
+import React from 'react';
+import { Button } from 'react-bootstrap';
+import { Control } from '.';
+
+export type SubmitControl = Control & {
+    title: string
+}
+
+export const isSubmit = (arg: Control): arg is SubmitControl => arg.type.toLowerCase() === 'submit';
+
 /**
- * Renders a text input.
- *
- * @param {TextControl} control
- * @returns
+ * Renders a submit.
+ * 
+ * @param {SubmitControl} control 
+ * @returns 
  */
-const renderText = (control) => (react_1.default.createElement(react_bootstrap_1.Form.Control, Object.assign({ type: "text", key: `${control.name}-${_1.randomId()}` }, control)));
-exports.renderText = renderText;
-//# sourceMappingURL=Text.js.map
+export const renderSubmit = (control: SubmitControl) => (
+    <Button type='submit' block {...control}>{control.title}</Button>
+)
+

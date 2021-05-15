@@ -17,8 +17,8 @@
  */
 
 import React from 'react';
-import { Form, Col } from 'react-bootstrap';
-import { Control, randomId } from './index';
+import { Form } from 'react-bootstrap';
+import { Control } from './index';
 
 export type CheckboxControl = Control & {
     labels: Array<string>;
@@ -38,9 +38,9 @@ export const renderCheckbox = (control: CheckboxControl) => {
     const { name, labels, inline = false } = control;
 
     return (
-        <div key={`${name}-${randomId()}-checkbox`}>
+        <div key={`${name}-checkbox`}>
             {labels.map((label, index) => (<Form.Check
-                key={`${name}-${randomId()}-checkbox-${index}`}
+                key={`${name}-checkbox-${index}`}
                 type='checkbox'
                 id={label}
                 label={label}

@@ -1,4 +1,3 @@
-"use strict";
 /**
  * bsformhelper
  *
@@ -16,8 +15,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.isControl = void 0;
-const isControl = (arg) => arg.hasOwnProperty('type');
-exports.isControl = isControl;
-//# sourceMappingURL=Control.js.map
+
+import React from 'react';
+import { Form } from 'react-bootstrap';
+import { Control, randomId } from '.';
+
+export type EmailControl = Control & {
+}
+export const isEmail = (arg: Control): arg is EmailControl => arg.type.toLowerCase() === 'email';
+
+/**
+ * Renders a email input.
+ * 
+ * @param {EmailControl} control 
+ * @returns 
+ */
+export const renderEmail = (control: EmailControl) => (
+    <Form.Control type="email" key={control.name} {...control} />
+)

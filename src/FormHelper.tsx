@@ -24,6 +24,8 @@ import {
 
     isLabel,
     isText,
+    isPassword,
+    isEmail,
     isSelect,
     isTextarea,
     isFile,
@@ -31,9 +33,13 @@ import {
     isCheckbox,
     isRadio,
     isDivider,
+    isButton,
+    isSubmit,
 
     renderLabel,
     renderText,
+    renderPassword,
+    renderEmail,
     renderSelect,
     renderTextarea,
     renderFile,
@@ -41,6 +47,8 @@ import {
     renderCheckbox,
     renderRadio,
     renderDivider,
+    renderButton,
+    renderSubmit,
 } from '.';
 
 
@@ -53,6 +61,8 @@ import {
 const renderControl = (control: Control) => (
     isLabel(control) ? renderLabel(control) :
     isText(control) ? renderText(control) :
+    isPassword(control) ? renderPassword(control) :
+    isEmail(control) ? renderEmail(control) :
     isSelect(control) ? renderSelect(control) :
     isTextarea(control) ? renderTextarea(control) :
     isFile(control) ? renderFile(control) :
@@ -60,6 +70,8 @@ const renderControl = (control: Control) => (
     isCheckbox(control) ? renderCheckbox(control) :
     isRadio(control) ? renderRadio(control) :
     isDivider(control) ? renderDivider() :
+    isButton(control) ? renderButton(control) :
+    isSubmit(control) ? renderSubmit(control) :
     <React.Fragment />
 )
 

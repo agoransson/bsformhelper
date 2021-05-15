@@ -18,7 +18,7 @@
 
 import React from 'react';
 import { Form } from 'react-bootstrap';
-import { Control, randomId } from './index';
+import { Control } from './index';
 
 export type FileControl = Control & {
 }
@@ -31,10 +31,6 @@ export const isFile = (arg: Control): arg is FileControl => arg.type.toLowerCase
  * @param {FileControl} control
  * @returns 
  */
-export const renderFile = (control: FileControl) => {
-    const { name } = control;
-
-    return (
-        <Form.File key={`${name}-${randomId()}`} {...control} />
-    );
-}
+export const renderFile = (control: FileControl) => (
+    <Form.File key={control.name} {...control} />
+)

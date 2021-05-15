@@ -18,7 +18,7 @@
 
 import React from 'react';
 import { Form } from 'react-bootstrap';
-import { Control, randomId } from '.';
+import { Control } from '.';
 
 export type TextareaControl = Control & {
     rows?: number
@@ -33,5 +33,5 @@ export const isTextarea = (arg: Control): arg is TextareaControl => arg.type.toL
  * @returns 
  */
 export const renderTextarea = (control: TextareaControl) => (
-    <Form.Control type='textarea' as='textarea' key={`${control.name}-${randomId()}`} {...control} />
+    <Form.Control type='textarea' as='textarea' key={control.name} {...control} />
 )

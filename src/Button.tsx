@@ -1,4 +1,3 @@
-"use strict";
 /**
  * bsformhelper
  *
@@ -16,8 +15,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.isText = void 0;
-const isText = (arg) => arg.type.toLowerCase() === 'text';
-exports.isText = isText;
-//# sourceMappingURL=TextControl.js.map
+
+import React from 'react';
+import { Button } from 'react-bootstrap';
+import { Control } from '.';
+
+export type ButtonControl = Control & {
+    title: string
+}
+
+export const isButton = (arg: Control): arg is ButtonControl => arg.type.toLowerCase() === 'button';
+
+/**
+ * Renders a button.
+ * 
+ * @param {ButtonControl} control 
+ * @returns 
+ */
+export const renderButton = (control: ButtonControl) => (
+    <Button block {...control}>{control.title}</Button>
+)
+

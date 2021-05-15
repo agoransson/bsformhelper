@@ -35,6 +35,6 @@ export const renderRange = (control: RangeControl) => {
     const { name } = control;
 
     return (
-        <Form.Control key={`${name}-${randomId()}`} type='range' {...control} />
+        <Form.Control key={name} type='range' {...control} />
     );
 }
