@@ -1,6 +1,6 @@
 {
   "name": "@agoransson/bsformhelper",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Simple helper for generating react-bootstrap forms from javascript objects.",
   "main": "dist/FormHelper.js",
   "types": "dist/FormHelper.d.ts",
