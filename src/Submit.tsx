@@ -33,6 +33,6 @@ export const isSubmit = (arg: Control): arg is SubmitControl => arg.type.toLower
  * @returns 
  */
 export const renderSubmit = (control: SubmitControl) => (
-    <Button type='submit' block {...control}>{control.title}</Button>
+    <Button key={control.name} type='submit' block {...control}>{control.title}</Button>
 )
 

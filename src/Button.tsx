@@ -33,6 +33,6 @@ export const isButton = (arg: Control): arg is ButtonControl => arg.type.toLower
  * @returns 
  */
 export const renderButton = (control: ButtonControl) => (
-    <Button block {...control}>{control.title}</Button>
+    <Button key={control.name} block {...control}>{control.title}</Button>
 )
 

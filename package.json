@@ -1,6 +1,6 @@
 {
   "name": "@agoransson/bsformhelper",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "description": "Simple helper for generating react-bootstrap forms from javascript objects.",
   "main": "dist/FormHelper.js",
   "types": "dist/FormHelper.d.ts",
@@ -11,6 +11,9 @@
   },
   "author": "Andreas Göransson (http://github.com/agoransson)",
   "license": "Apache-2.0",
+  "keywords": [
+    "react-bootstrap"
+  ],
   "dependencies": {
     "bootstrap": "^5.0.0",
     "react-bootstrap": "^1.5.2"
